@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Author: Kyle McDonald
+//Date:   10/24/2019
+//CTEC 135: Microsoft Software Development with C# 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,12 +27,12 @@ namespace Prob_3
                 Console.WriteLine();
             }
 
-            myDictionary[3] = "99";
+            myDictionary[99] = "\"99\"";
 
-            Console.WriteLine(myDictionary[3]);
+            Console.WriteLine(myDictionary[99]);
 
-            myDictionary.Remove(3);
-            myDictionary.Remove(1);
+            myDictionary.Remove(2);
+            //myDictionary.Remove(1);
 
             foreach (KeyValuePair<int, string> value in myDictionary)
             {
