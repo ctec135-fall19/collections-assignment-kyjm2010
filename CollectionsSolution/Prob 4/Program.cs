@@ -12,11 +12,11 @@ namespace Prob_4
 {
     class Program
 
-    { 
+    {
         //description:  Program demostrates traversal, .Find, .Remove and
-        //              .AddAfter functions of a linked list
+        //.AddAfter functions of a linked list
         //input:        The first 9 words of the itsy bitsy spider in a string
-        //              array
+        //array
         //output:       The initial output is the contents of the string array
         //printed on a single line using a foreach loop. Next, output is the 
         //exact same as previous line, just done differentlyThe next output 
@@ -39,29 +39,36 @@ namespace Prob_4
         {
             //create a string array and initialize it with characters from the
             //itsy bitsy spider 
-            string[] strArray = { "The ", "Itsy ", "Bitsy ", "Spider ", 
+            string[] strArray = { "The ", "Itsy ", "Bitsy ", "Spider ",
                 "Crawled ", "Up ", "The ", "Water ", "Spout " };
             //create a linked list that takes strArray as an argument
             LinkedList<string> verse = new LinkedList<string>(strArray);
             //print each word in the list on a single line
+            Console.WriteLine();
+            Console.WriteLine("------------------------------");
             Console.WriteLine("Traversal using a foreach loop");
-            foreach(string word in verse)
+            Console.WriteLine("------------------------------");
+            foreach (string word in verse)
             {
                 Console.Write(word);
-                
+
             }
+            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
             //create a node and set it to the first value of the linked list
             LinkedListNode<string> node = verse.First;
             //use a while loop to print the list on a single line ending when
             //node == null
+            Console.WriteLine("---------------------------------------");
             Console.WriteLine("Traversal using a while loop and a node");
+            Console.WriteLine("---------------------------------------");
             while (node != null)
             {
                 Console.Write("{0}", node.Value);
                 node = node.Next;
             }
+            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
             //use .Find to travers the list and find the value that matches,
@@ -70,7 +77,9 @@ namespace Prob_4
             //remove the current node from the list and re-print the list
             verse.Remove(current);
 
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("List after removal of \"Crawled \"");
+            Console.WriteLine("----------------------------------");
             foreach (string word in verse)
             {
                 Console.Write(word);
@@ -78,14 +87,17 @@ namespace Prob_4
             }
             Console.WriteLine();
             Console.WriteLine();
+            Console.WriteLine();
 
-            
+
             //set the current node to "Spider "
             current = verse.Find("Spider ");
             //using the AddAfter method, add the string "Crawled " back into 
             //the list after the current node then re-print the list
             verse.AddAfter(current, "Crawled ");
+            Console.WriteLine("-----------------------------------------");
             Console.WriteLine("After \"Crawled \" has been added back in");
+            Console.WriteLine("-----------------------------------------");
             foreach (string word in verse)
             {
                 Console.Write(word);
@@ -93,6 +105,6 @@ namespace Prob_4
             }
             Console.WriteLine();
             Console.WriteLine();
-        }
+        }    
     }
 }
