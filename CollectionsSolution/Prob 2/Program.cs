@@ -72,7 +72,8 @@ namespace Prob_2
             //each
             for (int i = 0; i<5; i++)
             {
-                Console.WriteLine("Popping number {0} from the stack", myIntStack.Pop());
+                Console.WriteLine("Popping number {0} from the stack", 
+                    myIntStack.Pop());
             }
             Console.WriteLine();
             #endregion
@@ -108,10 +109,12 @@ namespace Prob_2
             Console.WriteLine("-----------------");
             Console.WriteLine("Dequeuing Numbers");
             Console.WriteLine("-----------------");
-            //write a loop that dequeues the elements from the stack and prints each
+            //write a loop that dequeues the elements from the stack and prints
+            //each
             for (int k = 0; k <5; k++)
             {
-                Console.WriteLine("Dequeuing number: {0}", myIntQueue.Dequeue());
+                Console.WriteLine("Dequeuing number: {0}", 
+                    myIntQueue.Dequeue());
             }
             #endregion
         }
